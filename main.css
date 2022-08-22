@@ -249,5 +249,16 @@ input:checked ~ .bubble::after {
 }
 .img{
 	position : relative;
-		box-shadow: var(-glow);
+	box-shadow: var(-glow);
+	transition: transform 4s linear forwards;
+
+}
+Body :hover .img {
+
+	animation: left-to-right 4s linear forwards 0.5s;
+}
+@keyframes left-to-right{
+	100%{
+		transform: translateX(80%);
+	}
 }
